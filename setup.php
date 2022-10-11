@@ -1,6 +1,6 @@
 <?php
 
-define ("PLUGIN_MAILANALYZER_VERSION", "3.0.0");
+define ("PLUGIN_MAILANALYZER_VERSION", "3.0.1");
 
 /**
  * Summary of plugin_init_mailanalyzer
@@ -44,7 +44,7 @@ function plugin_version_mailanalyzer() {
       'requirements' => [
          'glpi' => [
             'min' => '10.0',
-            'max' => '10.1'
+            'max' => '10.3'
             ]
          ]
    ];
@@ -58,8 +58,8 @@ function plugin_version_mailanalyzer() {
  */
 function plugin_mailanalyzer_check_prerequisites() {
    if (version_compare(GLPI_VERSION, '10.0', 'lt')
-       && version_compare(GLPI_VERSION, '10.1', 'ge')) {
-      echo "This plugin requires GLPI >= 10.0 and < 10.1";
+       && version_compare(GLPI_VERSION, '10.3', 'ge')) {
+      echo "This plugin requires GLPI >= 10.0 and < 10.3";
       return false;
    } else {
       if (!class_exists('mailanalyzer_check_prerequisites')) {
